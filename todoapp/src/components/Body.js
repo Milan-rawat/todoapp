@@ -25,6 +25,31 @@ const Body = () => {
     fetchData();
   }, []);
 
+  const deleteTask = async (taskId) => {
+    const res = await fetch(
+      `http://localhost:8000/tasks/deleteTask?taskId=${taskId}`,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    fetchData();
+  };
+  const donetask = async (taskId) => {
+    const res = await fetch(
+      `http://localhost:8000/tasks/doneTask?taskId=${taskId}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    fetchData();
+  };
+
   return (
     <div className="body">
       <div className="addTaskBox">
@@ -61,11 +86,11 @@ const Body = () => {
                 <td>
                   <FaTrash
                     className="icon"
-                    onClick={() => console.log("delete")}
+                    onClick={() => deleteTask(task._id)}
                   />
                   <FaRegCheckSquare
                     className="icon"
-                    onClick={() => console.log("Mark as done")}
+                    onClick={() => donetask(task._id)}
                   />
                 </td>
               </tr>
@@ -90,7 +115,7 @@ const Body = () => {
                 <td>
                   <FaTrash
                     className="icon"
-                    onClick={() => console.log("delete")}
+                    onClick={() => deleteTask(task._id)}
                   />
                 </td>
               </tr>
