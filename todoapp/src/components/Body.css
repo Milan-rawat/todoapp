@@ -1,0 +1,91 @@
+input:focus {
+  outline: none;
+}
+
+.body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.addTaskBox {
+  display: flex;
+  width: 800px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 5px 5px 0 0;
+}
+
+input {
+  height: 100%;
+  width: 85%;
+  padding: 10px 20px;
+  font-size: 24px;
+  border: none;
+}
+
+.addTaskButton {
+  height: 100%;
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: whitesmoke;
+}
+
+.addTaskButton:hover {
+  background-color: lightgrey;
+}
+
+.taskBox {
+  width: 800px;
+  height: auto;
+}
+
+table {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border-collapse: collapse;
+  font-weight: bold;
+  margin: 0;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+th {
+  border: 1px solid lightgrey;
+  padding: 5px;
+  background-color: #050636;
+  color: white;
+}
+
+tr {
+  border-top: 1px solid lightgrey;
+  height: 60px;
+}
+tr:nth-child(odd) {
+  background-color: whitesmoke;
+}
+tr:nth-child(even) {
+  background-color: white;
+}
+td {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.icon {
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 10px;
+}
