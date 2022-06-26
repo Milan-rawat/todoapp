@@ -6,8 +6,8 @@ const Header = () => {
     <div className="header">
       <h2>Task Manager App</h2>
       <div className="buttons">
-        <div className="allTasks">All Tasks</div>
-        <div className="doneTasks">Completed Tasks</div>
+        {/* <div className="allTasks">All Tasks</div>
+        <div className="doneTasks">Completed Tasks</div> */}
       </div>
     </div>
   );
